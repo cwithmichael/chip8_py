@@ -22,6 +22,10 @@ def game_loop():
     clock = pygame.time.Clock()
     black = 0, 0, 0
     white = 255, 255, 255
+    fps = 60
+    gfx_width = 64
+    gfx_height = 32
+    scale_factor = 10
 
     screen = pygame.display.set_mode(size)
     game = load_game("PONG2")
@@ -64,13 +68,13 @@ def game_loop():
             pygame.mixer.Sound.play(beep)
             cpu.play_sound = False
         if cpu.draw_flag:
-            clock.tick(60)
-            for i in range(32):
-                for j in range(64):
-                    if cpu.gfx[i * 64 + j]:
-                        screen.fill(white, (j * 10, i * 10, 10, 10))
+            clock.tick(fps)
+            for i in range(gfx_height):
+                for j in range(gfx_width):
+                    if cpu.gfx[i * gfx_width + j]:
+                        screen.fill(white, (j * scale_factor, i * scale_factor, scale_factor, scale_factor))
                     else:
-                        screen.fill(black, (j * 10, i * 10, 10, 10))
+                        screen.fill(black, (j * scale_factor, i * scale_factor, scale_factor, scale_factor))
             pygame.display.flip()
             cpu.draw_flag = False
 
