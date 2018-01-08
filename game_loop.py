@@ -2,8 +2,8 @@ import pygame
 
 from cpu import Cpu
 
-
 def load_game(filename):
+    """Loads a Chip-8 game by reading in a file in binary mode"""
     bytes = []
     with open(filename, "rb") as f:
         b = f.read(1)
@@ -43,21 +43,22 @@ def game_loop():
         keys = pygame.key.get_pressed()
         if keys[pygame.K_ESCAPE]:
             run = False
+        #Row 1 of keys
         cpu.key[1] = keys[pygame.K_1]
         cpu.key[2] = keys[pygame.K_2]
         cpu.key[3] = keys[pygame.K_3]
         cpu.key[0xc] = keys[pygame.K_4]
-
+        #Row 2 of keys
         cpu.key[4] = keys[pygame.K_q]
         cpu.key[5] = keys[pygame.K_w]
         cpu.key[6] =  keys[pygame.K_e]
         cpu.key[0xd] = keys[pygame.K_r]
-
+        #Row 3 of keys
         cpu.key[7] = keys[pygame.K_a]
         cpu.key[8] = keys[pygame.K_s]
         cpu.key[9] = keys[pygame.K_d]
         cpu.key[0xe] = keys[pygame.K_f]
-
+        #Row 4 of keys
         cpu.key[0xa] = keys[pygame.K_z]
         cpu.key[0x0] = keys[pygame.K_x]
         cpu.key[0xb] = keys[pygame.K_c]
