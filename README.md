@@ -5,13 +5,13 @@ Find out more about Chip-8 here: [Chip-8 Wiki page](https://en.wikipedia.org/wik
 
 1. Install PyGame
 
-    python3 -m pip install pygame --user
+    `python3 -m pip install pygame --user`
     
     [Instructions for Mac](https://www.pygame.org/wiki/GettingStarted#Mac%20installation)
     
 2. Play Pong
 
-    python3 game_loop.py
+    `python3 game_loop.py`
     
     Player 1 Controls:
     
