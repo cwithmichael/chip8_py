@@ -15,10 +15,12 @@ Find out more about Chip-8 here: [Chip-8 Wiki page](https://en.wikipedia.org/wik
     
     Player 1 Controls:
     
-    1 - Move up  
-    q - Move down
+    `1` - Move up
+    
+    `q` - Move down
     
     Player 2 Controls:
     
-    4 - Move up
-    r - Move down
+    `4` - Move up
+    
+    `r` - Move down
