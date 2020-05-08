@@ -7,7 +7,7 @@ Find out more about Chip-8 here: [Chip-8 Wiki page](https://en.wikipedia.org/wik
 
     python3 -m pip install pygame --user
     
-    [Instructions for Mac Os X](https://www.pygame.org/wiki/GettingStarted#Mac%20installation)
+    [Instructions for Mac](https://www.pygame.org/wiki/GettingStarted#Mac%20installation)
     
 2. Play Pong
 
